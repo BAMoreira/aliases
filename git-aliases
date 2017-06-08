@@ -1,0 +1,28 @@
+[alias]
+    alias = "!git config -l | grep alias | cut -c 7-"
+    ll = "log  --pretty=format:\"%C(bold yellow)%h%Creset  %C(white)%s %C(cyan)- %cn %cr%Creset %C(auto)%d\" --graph --date-order"
+    ln = "!f() { [ -z "$1" ] && param=1 || param="$1" ; git log  --pretty=format:\"%C(bold yellow)%h%Creset  %C(white)%s %C(cyan)- %cn %cr%Creset %C(auto)%d\" --graph --date-order -$param;}; f"
+    lg = "!f() { git log  --pretty=format:\"%C(bold yellow)%h%Creset  %C(white)%s %C(cyan)- %cn %cr%Creset %C(auto)%d\" --date-order | grep -i $1;}; f"
+    update = "!git fetch && git pull"
+    cp = "!f() { git commit -a -m \"${1:-commit}\"; git push;}; f"
+    acp = "!f() { git add \"${1:-add}\"; git commit -a -m \"${2:-commit}\"; git push;}; f"
+    ra = "!f() { git remote add $1 git@github.com/$2.git; }; f"
+    cl = "!f() { git clone git@github.com:$1.git;}; f"
+    create = "!f() { din='{\"name\":\"%s\"}'; curl -u \"$1\" https://api.github.com/user/repos -d \"$(printf \"$din\" \"$2\")\" ; git clone git@github.com:$1/$2.git;}; f"
+    cu = "!f() { din='{\"name\":\"%s\"}'; gitusr=\"$(git config --global github.user)\"; curl -u \"$gitusr\" https://api.github.com/user/repos -d \"$(printf \"$din\" \"$1\")\" ; git clone git@github.com:$gitusr/$1.git;}; f"
+    cmas = "!git co master && git fetch && git pull"
+	cdev = "!git co develop && git fetch && git pull"
+    mdev = "!git co master && git fetch && git pull && git merge develop && git push && git co develop"
+    tp = "!f() { git tag $1; git push --tags;}; f"
+    find = "!git ls-files | grep -i"
+
+[log]
+    decorate = short
+
+[color "decorate"]
+    HEAD = "bold cyan"
+    branch = "bold dim white"
+    remoteBranch = "bold dim magenta"
+    tag = "bold white"
+[push]
+	default = current
