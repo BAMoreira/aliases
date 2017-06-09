@@ -1,1 +1,24 @@
- 
+alias md='mkdir'
+alias rd='rmdir'
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ll='ls --color=auto -lhtv'
+alias la='ls --color=auto -lahtv'
+alias l.='ls --color=auto -d ./* ./.*'
+alias lm='ls --color=auto -mw18446744073709551615'
+alias l='ls --color=auto -vCF'
+
+#alias dir='dir --color=auto'
+#alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ccat='pygmentize -g'
+
+alias swips='swipl -s'
+alias inda1='astyle -A1 -s4 -k3 -xj -SCNeUpv'
