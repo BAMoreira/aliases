@@ -1,12 +1,12 @@
 alias md='mkdir'
 alias rd='rmdir'
-alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias ls='ls --color=auto -tv'
 alias ll='ls --color=auto -lhtv'
 alias la='ls --color=auto -lahtv'
 alias l.='ls --color=auto -d ./* ./.*'
