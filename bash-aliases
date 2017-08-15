@@ -1,5 +1,5 @@
 alias md='mkdir'
-alias md='_mcd'
+alias mcd='_mcd'
 alias rd='rmdir'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
