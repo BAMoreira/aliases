@@ -1,4 +1,5 @@
 alias md='mkdir'
+alias md='_mcd'
 alias rd='rmdir'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -22,3 +23,9 @@ alias ccat='pygmentize -g'
 
 alias swips='swipl -s'
 alias inda1='astyle -A1 -s4 -k3 -xj -SCNeUpv'
+
+_mcd()
+{
+    mkdir $1
+    cd $1
+}
