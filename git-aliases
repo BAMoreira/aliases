@@ -2,7 +2,7 @@
     alias = "!git config -l | grep alias | cut -c 7-"
     ll = "log  --pretty=format:\"%C(bold yellow)%h%Creset  %C(white)%s %C(cyan)- %cn %cr%Creset %C(auto)%d\" --graph --date-order"
     ln = "!f() { [ -z "$1" ] && param=1 || param="$1" ; git log  --pretty=format:\"%C(bold yellow)%h%Creset  %C(white)%s %C(cyan)- %cn %cr%Creset %C(auto)%d\" --graph --date-order -$param;}; f"
-    lg = "!f() { git log  --pretty=format:\"%C(bold yellow)%h%Creset  %C(white)%s %C(cyan)- %cn %cr%Creset %C(auto)%d\" --date-order | grep -i $1;}; f"
+    lg = "!f() { git log  --pretty=format:\"%C(bold yellow)%h%Creset  %C(white)%s %C(cyan)- %cn %cr%Creset %C(auto)%d\" --date-order | grep -i \"$1\";}; f"
     update = "!git fetch --progress && git merge origin/$(git symbolic-ref -q --short HEAD)"
     cp = "!f() { git commit -a -m \"${1:-commit}\"; git push;}; f"
     acp = "!f() { git add \"${1:-add}\"; git commit -a -m \"${2:-commit}\"; git push;}; f"
