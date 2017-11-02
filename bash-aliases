@@ -23,6 +23,7 @@ alias ccat='pygmentize -g'
 
 alias swips='swipl -s'
 alias inda1='astyle -A1 -s4 -k3 -xj -SCNeUpv'
+alias cd..='cd ..'
 
 _mcd()
 {
